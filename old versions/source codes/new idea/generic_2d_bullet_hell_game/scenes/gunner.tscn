@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://by4ohy3k871gm"]
+
+[ext_resource type="Script" uid="uid://b2plhrm625rcx" path="res://scripts/gunner.gd" id="1_ougl3"]
+[ext_resource type="Texture2D" uid="uid://bw3tk5nhlw4vk" path="res://sprites/gunner/gunerleft2.png" id="2_ougl3"]
+[ext_resource type="Texture2D" uid="uid://bqrcmuif3vgtv" path="res://sprites/gunner/gunershooting2.png" id="3_kw1lf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_driy3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ougl3")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kw1lf")
+}],
+"loop": false,
+"name": &"shooting",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ougl3"]
+size = Vector2(10, 28)
+
+[node name="gunner" type="StaticBody2D" unique_id=414713784]
+z_index = 1
+collision_layer = 128
+collision_mask = 0
+script = ExtResource("1_ougl3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=622755443]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_driy3")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1976184651]
+shape = SubResource("RectangleShape2D_ougl3")
+
+[node name="cooldownTimer" type="Timer" parent="." unique_id=2140612002]
+wait_time = 4.0
+one_shot = true
+
+[node name="shootingTimer" type="Timer" parent="." unique_id=736484357]
+one_shot = true
+
+[node name="shootwaitTimer" type="Timer" parent="." unique_id=1336943815]
+one_shot = true
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=424220089]
+position = Vector2(14, -1)
+
+[connection signal="timeout" from="cooldownTimer" to="." method="_on_cooldown_timer_timeout"]
+[connection signal="timeout" from="shootingTimer" to="." method="_on_shooting_timer_timeout"]
+[connection signal="timeout" from="shootwaitTimer" to="." method="_on_shootwait_timer_timeout"]

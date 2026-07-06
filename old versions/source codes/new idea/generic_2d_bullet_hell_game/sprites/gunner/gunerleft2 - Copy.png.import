@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh273icvaw5b6"
-path="res://.godot/imported/Sprite-0001 - Copy.png-4789af770ccd644c604496474c49cc94.ctex"
+uid="uid://cqigb2u6fxnwr"
+path="res://.godot/imported/gunerleft2 - Copy.png-7fc348f81e60a9ea6f3782c18a900c2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Sprite-0001 - Copy.png"
-dest_files=["res://.godot/imported/Sprite-0001 - Copy.png-4789af770ccd644c604496474c49cc94.ctex"]
+source_file="res://sprites/gunner/gunerleft2 - Copy.png"
+dest_files=["res://.godot/imported/gunerleft2 - Copy.png-7fc348f81e60a9ea6f3782c18a900c2c.ctex"]
 
 [params]
 

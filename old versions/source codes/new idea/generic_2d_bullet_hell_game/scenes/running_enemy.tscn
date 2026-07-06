@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://737nfnejgfu3"]
 
-[ext_resource type="Script" uid="uid://cohllo8sqeh6g" path="res://scripts/area_2d.gd" id="1_5qd8b"]
+[ext_resource type="Script" uid="uid://cohllo8sqeh6g" path="res://scripts/enemy.gd" id="1_5qd8b"]
 [ext_resource type="Texture2D" uid="uid://cb7ups642l10a" path="res://sprites/Sprite-0002.png" id="2_t8ewd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d3026"]
@@ -29,6 +29,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_d3026")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2094011828]
+visible = false
 shape = SubResource("RectangleShape2D_5qd8b")
 disabled = true
 

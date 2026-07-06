@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="generic 2d shooter game (FOR TESTİNG)"
+config/name="generic 2d shooter game (Copy)"
 run/main_scene="uid://qebm8r1kt86k"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [input]
 
